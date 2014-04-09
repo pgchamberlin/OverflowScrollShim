@@ -1,37 +1,37 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width" />
         <style>
-            .responsive-table-container {
+            .responsive-scroll-container {
                 overflow-x: auto;
                 -webkit-overflow-scrolling: touch;
             }
 
             /* Force Webkit to continuously display horizontal scroll */
-            .responsive-table-container::-webkit-scrollbar {
+            .responsive-scroll-container::-webkit-scrollbar {
             -webkit-appearance: none;
                 height: 10px;
             }
 
             /* Force Webkit to continuously display horizontal scroll */
-            .responsive-table-container::-webkit-scrollbar-thumb {
+            .responsive-scroll-container::-webkit-scrollbar-thumb {
                 border-radius: 4px;
                 background-color: rgba(0, 0, 0, .5);
                 -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
             }
-            
-            table {
-                width: 100%;
-            }
 
+            .responsive-scroll-container p {
+                width: 2000px;
+            }
         </style>
     </head>
     <body>
         <h1>OverflowScrollShim</h1>
-        <p>Shims overflow-x: scroll for Android 2.x devices. This is inspired by and based on Chris Barr's <a href="http://chris-barr.com/2010/05/scrolling_a_overflowauto_element_on_a_touch_screen_device/">Touchscroll.js</a>.</p>
-        <div class="responsive-table-container">
+        <p>Shims overflow-x: scroll for Android 2.x devices. This is inspired by and based on Chris Barr's <a href="http://chris-barr.com/2010/05/scrolling_a_overflowauto_element_on_a_touch_screen_device/">Touchscroll.js</a>. It works pretty well on Androids 2.2 and 2.3. It works but is not a good experience on 2.1.</p>
+        <div class="responsive-scroll-container">
             <h2>This text should scroll horizontally</h2>
-            <p style="width: 2000px">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
-            <p style="width: 2000px">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
         </div>
         <p>By <a href="http://twitter.com/pgchamberlin">Peter Chamberlin</a>. This code is <a href="https://github.com/pgchamberlin/OverflowScrollShim">on Github</a>.</p>
         <script type="text/javascript" src="./overflow-scroll-shim.js"></script>

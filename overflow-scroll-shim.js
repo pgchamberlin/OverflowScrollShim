@@ -1,13 +1,11 @@
 (function() {
     var touchScroll = function() {
-        var elements = document.getElementsByClassName('responsive-table-container'),
+        var elements = document.getElementsByClassName('responsive-scroll-container'),
         scrollStartPosX = 0,
         i = 0;
         for (i; i < elements.length; i++) {
             elements[i].addEventListener("touchstart", function(event) {
                 var target = event.currentTarget;
-                // accesses then explicitly sets the container div's width
-                target.style.width = target.style.width;
                 scrollStartPosX = target.scrollLeft + event.touches[0].pageX;
             }, false);
 
