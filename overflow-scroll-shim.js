@@ -23,7 +23,5 @@
         return navigator.userAgent.match(/Android 2/i) ? true : false;
     }
 
-    if (isAndroid2xDevice()) {
-        touchScroll();
-    }
+    if (isAndroid2xDevice()) touchScroll();
 }());
