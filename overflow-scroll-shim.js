@@ -1,7 +1,8 @@
 (function(){
+    var scrollStartPosX = 0;
+
     function touchScroll() {
         var elements = document.getElementsByClassName('responsive-scroll-container'),
-        scrollStartPosX = 0,
         i = 0;
         for (i; i < elements.length; i++) {
             elements[i].addEventListener("touchstart", handleTouchStart, false);
