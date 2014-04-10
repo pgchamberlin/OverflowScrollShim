@@ -1,16 +1,18 @@
 (function(){
-    if (isAndroid2xDevice()) touchScroll();
+    // if (isAndroid2xDevice()) {
+        registerTouchScrollX();
+    // }
 
     var scrollStartPosX = 0;
 
-    function touchScroll() {
+    function registerTouchScrollX() {
         var elements = document.getElementsByClassName("responsive-scroll-container");
         var len      = elements.length;
         var counter  = 0;
 
         while (counter < len) {
-            elements[i].addEventListener("touchstart", handleTouchStart, false);
-            elements[i].addEventListener("touchmove",  handleTouchMove,  false);
+            elements[counter].addEventListener("touchstart", handleTouchStart, false);
+            elements[counter].addEventListener("touchmove",  handleTouchMove,  false);
             counter++;
         }
     }
@@ -30,11 +32,11 @@
     }
 
     function reachedStartFor (target, event) {
-        target.scrollLeft < target.scrollWidth - target.offsetWidth && target.scrollLeft + event.touches[0].pageX < scrollStartPosX - 5
+        return target.scrollLeft < target.scrollWidth - target.offsetWidth && target.scrollLeft + event.touches[0].pageX < scrollStartPosX - 5;
     }
 
     function reachedEndFor (target, event) {
-        target.scrollLeft != 0 && target.scrollLeft + event.touches[0].pageX > scrollStartPosX + 5
+        return target.scrollLeft != 0 && target.scrollLeft + event.touches[0].pageX > scrollStartPosX + 5;
     }
 
     function isAndroid2xDevice() {
