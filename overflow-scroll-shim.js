@@ -2,11 +2,14 @@
     var scrollStartPosX = 0;
 
     function touchScroll() {
-        var elements = document.getElementsByClassName("responsive-scroll-container"),
-        i = 0;
-        for (i; i < elements.length; i++) {
+        var elements = document.getElementsByClassName("responsive-scroll-container");
+        var len      = elements.length;
+        var counter  = 0;
+
+        while (counter < len) {
             elements[i].addEventListener("touchstart", handleTouchStart, false);
-            elements[i].addEventListener("touchmove", handleTouchMove, false);
+            elements[i].addEventListener("touchmove",  handleTouchMove,  false);
+            counter++;
         }
     }
 
