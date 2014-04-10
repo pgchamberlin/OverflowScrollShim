@@ -19,10 +19,20 @@
 
     function handleTouchMove (event) {
         var target = event.currentTarget;
-        if ((target.scrollLeft < target.scrollWidth - target.offsetWidth && target.scrollLeft + event.touches[0].pageX < scrollStartPosX - 5) || (target.scrollLeft != 0 && target.scrollLeft + event.touches[0].pageX > scrollStartPosX + 5)) {
+
+        if (reachedStartFor(target, event) || reachedEndFor(target, event)) {
             event.preventDefault();
         }
+
         target.scrollLeft = scrollStartPosX - event.touches[0].pageX;
+    }
+
+    function reachedStartFor (target, event) {
+        target.scrollLeft < target.scrollWidth - target.offsetWidth && target.scrollLeft + event.touches[0].pageX < scrollStartPosX - 5
+    }
+
+    function reachedEndFor (target, event) {
+        target.scrollLeft != 0 && target.scrollLeft + event.touches[0].pageX > scrollStartPosX + 5
     }
 
     function isAndroid2xDevice() {
