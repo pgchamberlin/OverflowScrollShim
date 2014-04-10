@@ -11,8 +11,7 @@
     }
 
     function handleTouchStart (event) {
-        var target = event.currentTarget;
-        scrollStartPosX = target.scrollLeft + event.touches[0].pageX;
+        scrollStartPosX = event.currentTarget.scrollLeft + event.touches[0].pageX;
     }
 
     function handleTouchMove (event) {
