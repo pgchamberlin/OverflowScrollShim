@@ -1,7 +1,7 @@
 (function(){
-    // if (isAndroid2xDevice()) {
+    if (isAndroid2xDevice()) {
         registerTouchScrollX();
-    // }
+    }
 
     var scrollStartPosX = 0;
 
