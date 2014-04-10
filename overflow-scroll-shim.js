@@ -1,5 +1,5 @@
 (function(){
-    var touchScroll = function() {
+    function touchScroll() {
         var elements = document.getElementsByClassName('responsive-scroll-container'),
         scrollStartPosX = 0,
         i = 0;
@@ -17,11 +17,11 @@
                 target.scrollLeft = scrollStartPosX - event.touches[0].pageX;
             }, false);
         }
-    },
+    }
 
-    isAndroid2xDevice = function() {
+    function isAndroid2xDevice() {
         return navigator.userAgent.match(/Android 2/i) ? true : false;
-    };
+    }
 
     if (isAndroid2xDevice()) {
         touchScroll();
