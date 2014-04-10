@@ -1,4 +1,6 @@
 (function(){
+    if (isAndroid2xDevice()) touchScroll();
+
     var scrollStartPosX = 0;
 
     function touchScroll() {
@@ -38,6 +40,4 @@
     function isAndroid2xDevice() {
         return navigator.userAgent.match(/Android 2/i) ? true : false;
     }
-
-    if (isAndroid2xDevice()) touchScroll();
 }());
