@@ -1,4 +1,4 @@
-(function() {
+(function(){
     var touchScroll = function() {
         var elements = document.getElementsByClassName('responsive-scroll-container'),
         scrollStartPosX = 0,
@@ -26,4 +26,4 @@
     if (isAndroid2xDevice()) {
         touchScroll();
     }
-})();
+}());
